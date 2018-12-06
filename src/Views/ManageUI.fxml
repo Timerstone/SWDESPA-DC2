@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="330.0" style="-fx-background-color: #7f8c8d; -fx-border-color: #000000; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.ManageUI">
+   <children>
+      <AnchorPane layoutY="22.0" style="-fx-background-color: #dcdcdc;" AnchorPane.bottomAnchor="430.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="68.0" layoutY="7.0" text="Manage Activities">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="18.0" layoutY="56.0" text="Choose Activity:" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dtpChoose" layoutX="136.0" layoutY="115.0" prefHeight="25.0" prefWidth="177.0" AnchorPane.leftAnchor="133.0" AnchorPane.rightAnchor="18.0" />
+      <Label layoutX="18.0" layoutY="114.0" text="Choose Date:" textFill="WHITE" AnchorPane.leftAnchor="15.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnEdit" layoutX="18.0" layoutY="148.0" mnemonicParsing="false" onMouseClicked="#edit" prefHeight="30.0" prefWidth="78.0" text="Edit" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="200.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancel" layoutX="97.0" layoutY="184.0" mnemonicParsing="false" onMouseClicked="#cancel" text="Cancel" AnchorPane.leftAnchor="95.0" AnchorPane.rightAnchor="95.0" AnchorPane.topAnchor="185.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblErrorMsg" layoutX="27.0" layoutY="419.0" text="Label" textFill="#b50000" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+      <ChoiceBox fx:id="chbActivities" layoutX="13.0" layoutY="80.0" prefHeight="25.0" prefWidth="255.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+      <Button fx:id="btnRemove" layoutX="202.0" layoutY="148.0" mnemonicParsing="false" onMouseClicked="#remove" prefHeight="30.0" prefWidth="78.0" text="Remove" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="15.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="22.0" layoutY="310.0" text="Time End:" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="310.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbEnd" layoutX="137.0" layoutY="311.0" prefHeight="25.0" prefWidth="171.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="310.0" />
+      <Label layoutX="12.0" layoutY="275.0" text="Time Start:" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="275.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="242.0" text="Activity Name:" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="240.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbStart" layoutX="136.0" layoutY="276.0" prefHeight="25.0" prefWidth="171.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="275.0" />
+      <TextField fx:id="txfName" layoutX="137.0" layoutY="243.0" prefHeight="25.0" prefWidth="171.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="240.0" />
+      <Button fx:id="btnConfirm" layoutX="104.0" layoutY="386.0" mnemonicParsing="false" onMouseClicked="#confirmAdd" text="Confirm Change" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="95.0" AnchorPane.rightAnchor="95.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="18.0" layoutY="350.0" text="Change Date:" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="345.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dtpChange" layoutX="136.0" layoutY="351.0" prefHeight="25.0" prefWidth="177.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="345.0" />
+      <CheckBox fx:id="ckbDone" layoutX="94.0" layoutY="387.0" mnemonicParsing="false" text="Mark as Done" AnchorPane.bottomAnchor="70.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+   </children>
+</AnchorPane>
